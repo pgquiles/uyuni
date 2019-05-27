@@ -2,15 +2,15 @@
 // Needs the Server object passed as 'server' and 'inSSM' value to be set
 include ./common.jade
 
-- var system_icon = "fa-desktop"
+- window.system_icon = "fa-desktop"
 if server.bootstrap
-  - var system_icon = "spacewalk-icon-bare-metal"
+  - window.system_icon = "spacewalk-icon-bare-metal"
 else
   if server.virtualGuest
-    - var system_icon = "spacewalk-icon-virtual-guest"
+    - window.system_icon = "spacewalk-icon-virtual-guest"
   else
     if server.virtualHost
-      - var system_icon = "spacewalk-icon-virtual-host"
+      - window.system_icon = "spacewalk-icon-virtual-host"
 
 .spacewalk-toolbar-h1
   .spacewalk-toolbar
@@ -32,7 +32,7 @@ else
     a(href="/docs/reference/systems/system-details.html" target="_blank")
       i.fa.fa-question-circle.spacewalk-help-link()
 
-- var sid = request.params("sid")
+- window.sid = request.params("sid")
 if !sid
-  - var sid = request.queryParams("sid")
+  - window.sid = request.queryParams("sid")
 !{h.renderNavigationMenuWithParams(request, "/WEB-INF/nav/system_detail.xml", {"sid": [sid]})}
