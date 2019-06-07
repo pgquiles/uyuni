@@ -6,7 +6,7 @@
 
 <html>
 <%-- disableAutoComplete() hack added to prevent certain browsers from exposing sensitive data --%>
-<body onLoad="disableAutoComplete();">
+<body>
 
 <c:if test="${schemaUpgradeRequired == 'true'}">
     <div class="alert alert-danger">
@@ -18,6 +18,10 @@
   <jsp:param name="action_path" value="/newlogin/CreateFirstUser"/>
   <jsp:param name="account_type" value="create_sat"/>
 </jsp:include>
+
+<script>
+    disableAutoComplete();
+</script>
 
 </body>
 </html>
