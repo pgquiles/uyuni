@@ -1,3 +1,5 @@
+- Add unit test for schedule, errata, user, utils and misc modules
+- Multiple minor bugfixes alongside the unit tests
 - Bugfix: referenced variable before assignment.
 - Add unit test for report, package, org, repo and group
 - Bugfix: 'dict' object has no attribute 'iteritems' (bsc#1135881)
