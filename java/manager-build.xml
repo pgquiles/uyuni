@@ -192,6 +192,21 @@
       </fileset>
     </copy>
   </target>
+  
+  <target name="pack-webapp" depends="webapp" description="Creates WAR">
+    <war destfile="${rhn.war}" webxml="${src.dir}/webapp/WEB-INF/web.xml">
+      <fileset dir="${src.dir}/webapp">
+        <exclude name="WEB-INF/web.xml"/>
+        <exclude name="help/**" unless="includehelp"/>
+      </fileset>
+      <classes dir="${build.dir}/classes">
+        <include name="log4j.properties" />
+      </classes>
+      <lib dir="${lib.dir}">
+        <include name="**/*.jar"/>
+      </lib>
+    </war>
+  </target>
 
   <target name="check-ssh-socket">
     <available file="${ssh.socket.file}" property="ssh-socket.present"/>
