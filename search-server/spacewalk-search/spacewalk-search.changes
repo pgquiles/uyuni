@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jul 31 17:47:09 CEST 2019 - jgonzalez@suse.com
+
+- version 4.0.8-1
+- Refactor: Drop unused class for Oracle
+
+-------------------------------------------------------------------
 Wed May 15 15:17:46 CEST 2019 - jgonzalez@suse.com
 
 - version 4.0.7-1

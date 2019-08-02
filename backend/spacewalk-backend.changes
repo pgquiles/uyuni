@@ -1,3 +1,13 @@
+-------------------------------------------------------------------
+Thu Aug 01 12:43:45 CEST 2019 - jgonzalez@suse.com
+
+- version 4.0.19-1
+- Fix import of rhnAuthPAM to avoid issues when using rhnpush.
+
+-------------------------------------------------------------------
+Wed Jul 31 17:30:57 CEST 2019 - jgonzalez@suse.com
+
+- version 4.0.18-1
 - Ensure bytes type when using hashlib to avoid traceback
   on XMLRPC call to "registration.register_osad" (bsc#1138822)
 - Fix for CVE-2019-10136. An attacker with a valid, but expired,
